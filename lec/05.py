@@ -90,3 +90,49 @@ Lambda
 <function <lambda> at 0x0000027122EA34C0>
 
 """
+
+##########################################
+
+"""
+Currying 
+
+Transforming a multi-argument function into a single-argument, higher-order function.
+
+"""
+
+
+def make_adder(n):
+    """
+    >>> make_adder(2)(3)
+    5
+    >>> add(2,3)
+    5 
+    """
+    return lambda k: n + k
+
+
+def curry2(f):
+    def g(x):
+        def h(y):
+            return f(x, y)
+        return h
+    return g
+
+
+"""
+>>> from operator import add
+>>> add(2,3)
+5
+>>> m = curry2(add)
+>>> m(2)(3)
+5
+>>> add_three = m(3)
+>>> add_three(2)
+5
+>>> add_three(2020)
+2023
+>>> curry2 = lambda f: lambda x: lambda y: f(x,y)
+>>> m = curry2(add)
+>>> m(2)(3)
+5
+"""
