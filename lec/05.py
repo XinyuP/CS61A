@@ -53,3 +53,40 @@ def make_adder(n):
 
 
 # f(1, 2)
+
+##########################################
+"""
+Lambda 
+
+>>> triple = lambda x: x ** 3
+>>> square = lambda x: x**2
+>>> triple(10)
+1000
+>>> square(2)
+4
+>>> square(10)
+100
+
+>>> (lambda x: x * x)(2)
+4
+>>> (lambda x: x * x)(5)
+25
+>>> (lambda x: x ** 3)(5)
+125
+
+
+>>> def sq(x):
+...     return x**2
+...
+>>> sq
+<function sq at 0x0000027122EA3380>
+
+* only def gives the function an intrinsic name
+
+>>> square
+<function <lambda> at 0x0000027122EA32E0>
+
+>>> (lambda x: x * x)
+<function <lambda> at 0x0000027122EA34C0>
+
+"""
