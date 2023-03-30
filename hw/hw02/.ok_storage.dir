@@ -1,0 +1,4 @@
+'mod_maker-correct', (0, 70)
+'mul_by_num-correct', (512, 70)
+'add_results-correct', (1024, 70)
+'lambda_math_syntax_check-correct', (1536, 70)
